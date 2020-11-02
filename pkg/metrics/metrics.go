@@ -9,7 +9,7 @@ import (
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 )
 
 // This const block defines the metric names.
@@ -31,10 +31,10 @@ const (
 	imdsOperationsDurationName             = "imds_operations_duration_seconds"
 
 	// AdalTokenFromMSIOperationName represents the duration of obtaining a token with MSI.
-	AdalTokenFromMSIOperationName = "adal_token_msi"
+	AdalTokenFromMSIOperationName = "adal_token_msi" // #nosec
 
 	// AdalTokenFromMSIWithUserAssignedIDOperationName represents the duration of obtaining a token with a user-assigned identity.
-	AdalTokenFromMSIWithUserAssignedIDOperationName = "adal_token_msi_userassignedid"
+	AdalTokenFromMSIWithUserAssignedIDOperationName = "adal_token_msi_userassignedid" // #nosec
 
 	// AdalTokenOperationName represents the duration of obtaining a token.
 	AdalTokenOperationName = "adal_token"
